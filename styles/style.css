@@ -1,0 +1,26 @@
+.req {
+    display: inline-flex;
+    justify-items: start;
+    border: 1px #bb5fce solid;
+    border-radius: 3px;
+    margin: 10px;
+    margin-bottom: 30px;
+    padding: 10px;
+}
+
+.linee {
+    border: #bb5fce 1px solid;
+    display: flex;
+    margin: 20px;
+}
+
+.btnn {
+    display: flex;
+    justify-content: flex-end;
+}
+
+body h3 {
+    margin-bottom: 50px;
+    color: rgb(85, 84, 84);
+    text-decoration: underline;
+}

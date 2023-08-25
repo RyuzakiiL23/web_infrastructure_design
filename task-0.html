@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+              <a class="nav-link" href="/index.html">Infrastructure Design</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">task-0</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/task-1.html">task-1</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/task-2.html">task-2</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/task-3.html">task-3</a>
+            </li>
+    </header>
+    <div class="container">
+        <h3>Our whiteboard as a cahrtflow</h3>
+      <img src="images/Screenshot from 2023-08-25 02-39-15.png" alt="">
+      <div class="linee"></div>
+      <h3>Explanation of the given infrastructures</h3>
+      <ul>
+          <li>
+            <h5>What is a server:</h5>
+            <p>A server is a computer or a software program that provides services, resources, or functionality to other computers or devices on a network. It responds to requests from clients (such as user's computers or applications) and delivers the requested data or services.</p>
+          </li>
+          <li>
+            <h5>What is the role of the domain name:</h5>
+            <p>A domain name is a human-readable name that is used to identify and locate resources on the Internet. It serves as an easy-to-remember label for the numeric IP address of a server hosting a website. Domain names help users access websites without having to remember complex IP addresses.</p>
+          </li>
+          <li>
+            <h5>What type of DNS record www is in www.foobar.com:</h5>
+            <p>The DNS record "www" in "www.foobar.com" refers to a subdomain. It is a type of DNS record used to point to a specific resource on a domain. In this case, "www" is used to point to the web server that hosts the website's web pages.</p>
+          </li>
+          <li>
+            <h5>What is the role of the web server:</h5>
+            <p>The web server is responsible for receiving incoming requests from users' web browsers and delivering the appropriate web pages, files, or resources in response. It serves as the entry point for user requests and communicates with the application server to generate dynamic content.</p>
+          </li>
+          <li>
+            <h5>What is the role of the application server:</h5>
+            <p>The application server is responsible for processing and executing the business logic of a web application. It interacts with the database to retrieve or store data, processes user input, and generates dynamic content. It works in conjunction with the web server to deliver complete web pages to users' browsers.</p>
+          </li>
+          <li>
+            <h5>What is the role of the database:</h5>
+            <p>The database stores and manages structured data used by the web application. It can store user profiles, content, configurations, and other relevant information. The application server communicates with the database to retrieve, update, or store data required to generate web pages and respond to user interactions.</p>
+          </li>
+          <li>
+            <h5>What is the server using to communicate with the computer of the user requesting the website:</h5>
+            <p>The server uses the HTTP (Hypertext Transfer Protocol) to communicate with the user's computer or device requesting the website. HTTP is the protocol that facilitates the transfer of web pages, files, and resources between the server and the client's web browser.</p>
+          </li>
+      </ul>
+      <div class="linee"></div>
+      <h3>The issues with the given infrastructures</h3>
+        <ul>
+          <li>
+            <h5>SPOF (Single Point of Failure):</h5>
+            <p>The infrastructure described has a single server that hosts the entire web application, including the web server, application server, and database. If this single server experiences hardware failure or other issues, the entire website will become inaccessible. This is a single point of failure because the failure of one component affects the entire system.</p>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <h5>Downtime During Maintenance:</h5>
+            <p>When performing maintenance tasks such as deploying new code or updates, the web server might need to be restarted. During this restart period, the website could experience downtime, causing inconvenience to users. Since all components are hosted on the same server, any maintenance activity affecting the server will impact the availability of the entire application.</p>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <h5>Cannot scale if too much incoming traffic</h5>
+            <p>The infrastructure is designed with a single server, which means it has limited resources in terms of processing power, memory, and storage. As the website gains popularity and user traffic increases, the server may not be able to handle the load efficiently. Scaling resources to accommodate higher traffic becomes challenging, and there's a risk of performance degradation or even crashes during peak traffic periods.</p>
+          </li>
+        </ul>
+      
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script> 
+</body>
+</html>

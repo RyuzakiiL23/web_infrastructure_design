@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/index.html">Infrastructure Design</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/task-0.html">task-0</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/task-1.html">task-1</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/task-2.html">task-2</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/task-3.html">task-3</a>
+            </li>
+    </header>
+    <div class="container">
+      <div class="req">Task-0 Reaquirements | 0. Simple web stack</div>
+      <div class="panel-body">
+        <span id="user_id" data-id="387608"></span>
+    
+        <!-- Progress vs Score -->
+    
+        <!-- Task Body -->
+        <p>A lot of websites are powered by simple web infrastructure, a lot of time it is composed of a single server with a <a href="https://intranet.alxswe.com/rltoken/YVDX0XsC6XHp0nmezvT9vQ" title="LAMP stack" target="_blank">LAMP stack</a>.</p>
+    
+    <p>On a whiteboard, design a one server web infrastructure that hosts the website that is reachable via <code>www.foobar.com</code>. Start your explanation by having a user wanting to access your website.</p>
+    
+    <p>Requirements:</p>
+    
+    <ul>
+    <li> You must use:
+    
+    <ul>
+    <li>1 server</li>
+    <li>1 web server (Nginx)</li>
+    <li>1 application server</li>
+    <li>1 application files (your code base)</li>
+    <li>1 database (MySQL)</li>
+    <li>1 domain name <code>foobar.com</code> configured with a <code>www</code> record that points to your server IP <code>8.8.8.8</code></li>
+    </ul></li>
+    <li>You must be able to explain some specifics about this infrastructure:
+    
+    <ul>
+    <li>What is a server</li>
+    <li>What is the role of the domain name</li>
+    <li>What type of DNS record <code>www</code> is in <code>www.foobar.com</code></li>
+    <li>What is the role of the web server</li>
+    <li>What is the role of the application server</li>
+    <li>What is the role of the database</li>
+    <li>What is the server using to communicate with the computer of the user requesting the website</li>
+    </ul></li>
+    <li>You must be able to explain what the issues are with this infrastructure:
+    
+    <ul>
+    <li>SPOF</li>
+    <li>Downtime when maintenance needed (like deploying new code web server needs to be restarted)</li>
+    <li>Cannot scale if too much incoming traffic</li>
+    </ul></li>
+    </ul>
+
+    <div class="btnn">
+  <a href="/task-0.html">
+      <button href="/task-3.html" type="button" class="btn btn-outline-info">Anwsers</button>
+  </a>
+</div>
+
+      </div>
+      <div class="linee"></div>
+      <div class="req">Task-1 Reaquirements | 1. Distributed web infrastructure</div>
+      <div class="panel-body">
+    <span id="user_id" data-id="387608"></span>
+
+    <!-- Progress vs Score -->
+
+    <!-- Task Body -->
+    <p>On a whiteboard, design a three server web infrastructure that hosts the website <code>www.foobar.com</code>.</p>
+
+<p>Requirements:</p>
+
+<ul>
+<li> You must add:
+
+<ul>
+<li>2 servers</li>
+<li>1 web server (Nginx)</li>
+<li>1 application server</li>
+<li>1 load-balancer (HAproxy)</li>
+<li>1 set of application files (your code base)</li>
+<li>1 database (MySQL)</li>
+</ul></li>
+<li>You must be able to explain some specifics about this infrastructure:
+
+<ul>
+<li>For every additional element, why you are adding it</li>
+<li>What distribution algorithm your load balancer is configured with and how it works</li>
+<li>Is your load-balancer enabling an Active-Active or Active-Passive setup, explain the difference between both</li>
+<li>How a database Primary-Replica (Master-Slave) cluster works</li>
+<li>What is the difference between the Primary node and the Replica node in regard to the application</li>
+</ul></li>
+<li>You must be able to explain what the issues are with this infrastructure:
+
+<ul>
+<li>Where are SPOF</li>
+<li>Security issues (no firewall, no HTTPS)</li>
+<li>No monitoring</li>
+</ul></li>
+</ul>
+
+<div class="btnn">
+  <a href="/task-1.html">
+      <button type="button" class="btn btn-outline-info">Anwsers</button>
+  </a>
+</div>
+
+      </div>
+      <div class="linee"></div>
+      <div class="req">Task-2 Reaquirements | 2. Secured and monitored web infrastructure</div>
+      <div class="panel-body">
+    <span id="user_id" data-id="387608"></span>
+
+    <!-- Progress vs Score -->
+
+    <!-- Task Body -->
+    <p>On a whiteboard, design a three server web infrastructure that hosts the website <code>www.foobar.com</code>, it must be secured, serve encrypted traffic, and be monitored.</p>
+
+<p>Requirements:</p>
+
+<ul>
+<li> You must add:
+
+<ul>
+<li>3 firewalls </li>
+<li>1 SSL certificate to serve <code>www.foobar.com</code> over HTTPS</li>
+<li>3 monitoring clients (data collector for Sumologic or other monitoring services)</li>
+</ul></li>
+<li>You must be able to explain some specifics about this infrastructure:
+
+<ul>
+<li>For every additional element, why you are adding it</li>
+<li>What are firewalls for</li>
+<li>Why is the traffic served over HTTPS</li>
+<li>What monitoring is used for</li>
+<li>How the monitoring tool is collecting data</li>
+<li>Explain what to do if you want to monitor your web server QPS</li>
+</ul></li>
+<li>You must be able to explain what the issues are with this infrastructure:
+
+<ul>
+<li>Why terminating SSL at the load balancer level is an issue</li>
+<li>Why having only one MySQL server capable of accepting writes is an issue</li>
+<li>Why having servers with all the same components (database, web server and application server) might be a problem</li>
+</ul></li>
+</ul>
+
+<div class="btnn">
+  <a href="/task-2.html">
+      <button type="button" class="btn btn-outline-info">Anwsers</button>
+  </a>
+</div>
+
+      </div>
+      <div class="linee"></div>
+      <div class="req">Task-3 Reaquirements | 3. Scale up</div>
+      <div class="panel-body">
+    <span id="user_id" data-id="387608"></span>
+
+    <!-- Progress vs Score -->
+
+    <!-- Task Body -->
+    <p>Readme</p>
+
+<ul>
+<li><a href="https://intranet.alxswe.com/rltoken/toFi_SdFHyi2MaELB8ekqw" title="Application server vs web server" target="_blank">Application server vs web server</a></li>
+</ul>
+
+<p>Requirements:</p>
+
+<ul>
+<li> You must add:
+
+<ul>
+<li>1 server</li>
+<li>1 load-balancer (HAproxy) configured as cluster with the other one</li>
+<li>Split components (web server, application server, database) with their own server</li>
+</ul></li>
+<li>You must be able to explain some specifics about this infrastructure:
+
+<ul>
+<li>For every additional element, why you are adding it</li>
+</ul></li>
+</ul>
+<div class="btnn">
+  <a href="/task-3.html">
+      <button href="/task-3.html" type="button" class="btn btn-outline-info">Anwsers</button>
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script> 
+</body>
+</html>
