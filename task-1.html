@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <title>Document</title>
@@ -26,7 +27,62 @@
             </li>
     </header>
     <div class="container">
+      <img src="images/2.png" alt="">
+      <div class="linee"></div>
+      <h3>Explanation of the given infrastructures</h3>
+      <ul>
+          <li>
+            <h5>For every additional element, why you are adding itWhat is a server:</h5>
+            <p>Second server: it is used to prevent a single server from struggling to handle the load. <br> Load balancer: it ensures that the workload is distributed evenly, keeping the servers responsive and reliable</p>
+          </li>
+          <li>
+            <h5>What distribution algorithm your load balancer is configured with 
+and how it works:</h5>
+            <p>Load balancer is configured with Round Robin, where each server gets a turn. Incoming requests are distributed sequentially to each server in the rotation. <br> Our 2 servers have the same performance and we want to optimize their utilization.</p>
+          </li>
+          <li>
+            <h5>Is your load-balancer enabling an Active-Active or Active-Passive 
+setup, explain the difference between both:</h5>
+            <p>Our load balancer enabling an Active-Active setup where multiple servers are actively handling traffic. This configuration is designed todistribute the workload evenly and improve resource utilization.              <br>Active-Active setups are more suitable for scenarios where resource utilization, load balancing, and high availability are critical. Active-Passive setups are simpler and better suited for applications where failover and data consistency are primary concerns.</p>
+          </li>
+          <li>
+            <h5>What is the role of the web server:</h5>
+            <p>The web server is responsible for receiving incoming requests from users' web browsers and delivering the appropriate web pages, files, or resources in response. It serves as the entry point for user requests and communicates with the application server to generate dynamic content.</p>
+          </li>
+          <li>
+            <h5>How a database Primary-Replica (Master-Slave) cluster works:</h5>
+            <p>In this setup, changes are made on the master (primary) database, and these changes are replicated to the slave (replica) database. Replicas are read-only and primarily used for distributing read operations. This setup is suitable for maintaining read scalability and redundancy.</p>
+          </li>
+          <li>
+            <h5>What is the difference between the Primary node and the Replica 
+node in regard to the application:</h5>
+            <p>The primary node is responsible for write operations, maintaining data consistency, and handling failover scenarios. 
+            The replica nodes primarily handle read operations, replicate data 
+              changes from the primary, serve as backup sources, and can distribute read loads.</p>
+          </li>
 
+      </ul>
+      <div class="linee"></div>
+      <h3>The issues with the given infrastructures</h3>
+        <ul>
+          <li>
+            <h5>SPOF (Single Point of Failure):</h5>
+            <p>Database Cluster: If the primary database server is a single point of failure, a failure in this server could disrupt data availability and application functionality. A primary-replica cluster would mitigate this by enabling failover to a replica in case of primary failure.</p>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <h5>Security Issues (No Firewall, No HTTPS):</h5>
+            <p>Without HTTPS, communication between users and the application is not encrypted. This poses a security risk, potentially allowing sensitive data to be intercepted. Implementing HTTPS using SSL certificates ensures secure communication.</p>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <h5>No Monitoring:</h5>
+            <p>Lack of Real-Time Insights: Without monitoring tools, there is no way to track system performance, resource utilization, or identify potential issues in real time.
+              <br>Delayed Issue Detection: Monitoring provides proactive detection of performance bottlenecks, security breaches, and other critical incidents. Without it, organizations might respond to issues only after they impact users or operations.</p>
+          </li>
+        </ul>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>

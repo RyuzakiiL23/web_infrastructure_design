@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <title>Document</title>
@@ -26,7 +27,51 @@
             </li>
     </header>
     <div class="container">
-
+      <img src="images/3.png" alt="">
+      <div class="linee"></div>
+      <h3>Explanation of the given infrastructures</h3>
+      <ul>
+          <li>
+            <h5>Firewalls:</h5>
+            <p>Firewalls are security devices or software applications designed to monitor and control incoming and outgoing network traffic based on predetermined security rules. They act as a barrier between a trusted internal network and untrusted external networks, helping to prevent unauthorized access, data breaches, and other cyber threats. Firewalls can block or allow traffic based on factors like IP addresses, port numbers, and application protocols.</p>
+          </li>
+          <li>
+            <h5>Traffic served over HTTPS:</h5>
+            <p>HTTPS (Hypertext Transfer Protocol Secure) is used to serve traffic over an encrypted connection between a client (user's browser) and a server. This encryption ensures that data transmitted between the client and server remains confidential and cannot be easily intercepted or tampered with by malicious actors. HTTPS uses SSL/TLS protocols to establish a secure communication channel, providing authentication, data integrity, and encryption.</p>
+          </li>
+          <li>
+            <h5>Monitoring:</h5>
+            <p>Monitoring involves observing and tracking the performance, health, and availability of various components within an infrastructure. It helps ensure that systems are operating optimally, identifies potential issues or anomalies, and aids in maintaining overall system reliability. Monitoring can involve tracking metrics like CPU usage, memory utilization, network traffic, response times, error rates, and more.</p>
+          </li>
+          <li>
+            <h5>Collecting Data in Monitoring:</h5>
+            <p>Monitoring tools collect data through various means, such as agents installed on servers, polling of network devices, analyzing log files, and using APIs provided by different components. The collected data is then processed, analyzed, and presented in the form of visualizations, dashboards, and reports for administrators to make informed decisions and take actions as needed.</p>
+          </li>
+          <li>
+            <h5>Monitoring Web Server QPS:</h5>
+            <p>To monitor the web server's Query Per Second (QPS), you can use monitoring tools like Prometheus, New Relic, or Datadog. These tools often provide built-in metrics for tracking QPS. You would need to configure the monitoring tool to gather data from the web server, which could involve setting up relevant plugins or agents and specifying the metrics you want to track. The monitoring tool will then continuously collect QPS data and display it on dashboards for analysis.</p>
+          </li>
+      </ul>
+      <div class="linee"></div>
+      <h3>The issues with the given infrastructures</h3>
+        <ul>
+          <li>
+            <h5>Terminating SSL at the Load Balancer Level: </h5>
+            <p>Terminating SSL at the load balancer exposes decrypted traffic within the internal network, potentially exposing sensitive data. SSL termination might be necessary for load balancing, but it could lead to data exposure if not managed properly.</p>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <h5>Single MySQL Server Accepting Writes:</h5>
+            <p>Having only one MySQL server capable of accepting writes creates a single point of failure. If the server fails or becomes overwhelmed, it could lead to downtime and data loss. Replication and clustering techniques should be considered to enhance fault tolerance.</p>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <h5>Uniformity of Servers:</h5>
+            <p>Using identical components for all servers (database, web server, application server) might lead to resource contention issues. Different components have varying resource requirements. Using the same server configuration for all components might not optimize performance and resource utilization.</p>
+          </li>
+        </ul>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
